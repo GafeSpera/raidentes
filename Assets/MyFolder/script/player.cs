@@ -8,6 +8,7 @@ public class player : MonoBehaviour {
 	public float speed = 10;
 	//向きを変える速度
 	public float rotSpeed = 1.5f;
+	int hp = 5;
 
 	//Startメソッドをコルーチンとして呼び出す
 	IEnumerator Start() {
@@ -35,7 +36,17 @@ public class player : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
+		hp --;
 		//unit.Explosion ();
-		Destroy (gameObject);
+		if (hp == 0) {
+			Destroy (gameObject);
+		}
+	}
+	void OnCollisionEnter(Collision col){
+		hp --;
+		//unit.Explosion ();
+		if (hp == 0) {
+			Destroy (gameObject);
+		}
 	}
 }

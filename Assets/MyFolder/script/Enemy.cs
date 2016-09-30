@@ -5,9 +5,7 @@ public class Enemy : MonoBehaviour {
 
 	Unit unit;
 	public float speed = 10;
-	//public GameObject bullet;
-	//public float shotDelay;
-	//public bool canShot;
+	public int hp = 4;
 
 	IEnumerator Start () {
 		//移動
@@ -33,7 +31,10 @@ public class Enemy : MonoBehaviour {
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 		//レイヤー名がBullet(Player)以外の時は何も行わない
 		if(layerName != "Bullet(Player)")return;
-		//unit.Explosion();
-		Destroy (gameObject);
+		hp--;
+		if (hp <= 0) {
+			//unit.Explosion();
+			Destroy (gameObject);
+		}
 	}
 }
