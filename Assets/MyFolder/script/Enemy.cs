@@ -28,6 +28,12 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
-	void Update () {
+	void OnTriggerEnter (Collider col) {
+		//レイヤー名を取得
+		string layerName = LayerMask.LayerToName (col.gameObject.layer);
+		//レイヤー名がBullet(Player)以外の時は何も行わない
+		if(layerName != "Bullet(Player)")return;
+		//unit.Explosion();
+		Destroy (gameObject);
 	}
 }
