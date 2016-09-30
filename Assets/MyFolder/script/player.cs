@@ -43,6 +43,11 @@ public class player : MonoBehaviour {
 		}
 	}
 	void OnCollisionEnter(Collision col){
+		iTween.ColorFrom (gameObject, iTween.Hash (
+			"color", new Color (255, 0, 0),
+			"time", 0.01f,
+			"delay", 0.01f
+		));
 		hp --;
 		//unit.Explosion ();
 		if (hp == 0) {

@@ -31,6 +31,11 @@ public class Enemy : MonoBehaviour {
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 		//レイヤー名がBullet(Player)以外の時は何も行わない
 		if(layerName != "Bullet(Player)")return;
+		iTween.ColorFrom (gameObject, iTween.Hash (
+			"color", new Color (255, 0, 0),
+			"time", 0.5f,
+			"delay", 0.01f
+		));
 		hp--;
 		if (hp <= 0) {
 			//unit.Explosion();
