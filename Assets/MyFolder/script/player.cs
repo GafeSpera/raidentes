@@ -3,20 +3,21 @@ using System.Collections;
 
 public class player : MonoBehaviour {
 
+	Unit unit;
 	//移動速度
 	public float speed = 10;
 	//向きを変える速度
 	public float rotSpeed = 1.5f;
 
-	public GameObject bullet;
-
 	//Startメソッドをコルーチンとして呼び出す
 	IEnumerator Start() {
+		//Unitコンポーネントを取得
+		unit = GetComponent<Unit> ();
 		while (true) {
 			//弾をプレイヤーと同じ位置/角度で作成
-			Instantiate(bullet, transform.position, transform.rotation);
+			unit.Shot(transform);
 			//0.05秒待つ
-			yield return new WaitForSeconds(0.1f);
+			yield return new WaitForSeconds(unit.shotDelay);
 		}
 	}
 
@@ -31,7 +32,10 @@ public class player : MonoBehaviour {
 		transform.Rotate(0, x * rotSpeed, -y * rotSpeed);
 		//体の向きを戻す
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, Time.deltaTime);
+	}
 
-
+	void OnTriggerEnter(Collider col){
+		//unit.Explosion ();
+		Destroy (gameObject);
 	}
 }

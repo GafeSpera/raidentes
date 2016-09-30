@@ -12,13 +12,9 @@ public class bullet : MonoBehaviour {
 	void Start () {
 		time = 0;
 		GetComponent<Rigidbody>().velocity = -transform.right * speed;
+		Destroy (gameObject, lifeTime);
     }
-	
-	// Update is called once per frame
+
 	void Update () {
-		time += Time.deltaTime;
-		if (time > lifeTime) {
-			Destroy (gameObject);
-		}
 	}
 }

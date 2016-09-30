@@ -3,27 +3,31 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
+	Unit unit;
 	public float speed = 10;
-	public GameObject bullet;
-	public float shotDelay;
-	public bool canShot;
-	// Use this for initialization
+	//public GameObject bullet;
+	//public float shotDelay;
+	//public bool canShot;
+
 	IEnumerator Start () {
+		//移動
 		GetComponent<Rigidbody> ().velocity = transform.right * speed;
 
-		if (canShot == false) {
+		//Unitコンポーネントを取得
+		unit = GetComponent<Unit> ();
+		//弾の発射
+		if (unit.canShot == false) {
 			yield break;
 		}
 		while (true) {
 			for (int i = 0; i < transform.childCount; i++) {
 				Transform shotPosition = transform.GetChild (i);
-				Instantiate (bullet, shotPosition.position, shotPosition.rotation);
+				unit.Shot (shotPosition);
 			}
-			yield return new WaitForSeconds (shotDelay);
+			yield return new WaitForSeconds (unit.shotDelay);
 		}
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 	}
 }
