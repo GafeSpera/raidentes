@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000013044940852}
   - 33: {fileID: 33000014142339570}
   - 23: {fileID: 23000012137040066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - 4: {fileID: 4000011401630468}
   - 33: {fileID: 33000013992978574}
   - 23: {fileID: 23000010552986522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hand_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - 4: {fileID: 4000011594053188}
   - 33: {fileID: 33000010117102818}
   - 23: {fileID: 23000012329358064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: upper_arm_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - 4: {fileID: 4000010962832040}
   - 33: {fileID: 33000010879906340}
   - 23: {fileID: 23000012364562956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: toe_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - 4: {fileID: 4000012224629302}
   - 33: {fileID: 33000011531801144}
   - 23: {fileID: 23000011838705370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: back01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - 4: {fileID: 4000012308399024}
   - 33: {fileID: 33000014143793516}
   - 23: {fileID: 23000011519304464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - 4: {fileID: 4000011527496842}
   - 33: {fileID: 33000014242241134}
   - 23: {fileID: 23000010858837836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: back03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - 4: {fileID: 4000010343447090}
   - 33: {fileID: 33000012097756310}
   - 23: {fileID: 23000012661007628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: back_booster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - 4: {fileID: 4000013339735304}
   - 33: {fileID: 33000013284222622}
   - 23: {fileID: 23000012427706984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - 4: {fileID: 4000010047421548}
   - 33: {fileID: 33000012220388100}
   - 23: {fileID: 23000010117885254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm_armer_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - 4: {fileID: 4000011857645120}
   - 33: {fileID: 33000012304230110}
   - 23: {fileID: 23000013604112102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: back02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - 4: {fileID: 4000011646768130}
   - 33: {fileID: 33000010602027770}
   - 23: {fileID: 23000011000456020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: heel_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - 4: {fileID: 4000010349219292}
   - 33: {fileID: 33000014279439616}
   - 23: {fileID: 23000014133851344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: knee_armer_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - 4: {fileID: 4000011526344260}
   - 33: {fileID: 33000010001732706}
   - 23: {fileID: 23000013649123738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: laser_rifle_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - 4: {fileID: 4000010134671294}
   - 33: {fileID: 33000013856931612}
   - 23: {fileID: 23000010847394384}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg_armer_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - 4: {fileID: 4000011218820090}
   - 33: {fileID: 33000010472724470}
   - 23: {fileID: 23000011786240434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: laser_rifle_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - 4: {fileID: 4000010963506748}
   - 33: {fileID: 33000010820531254}
   - 23: {fileID: 23000014091677068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - 4: {fileID: 4000014292751628}
   - 33: {fileID: 33000014087589174}
   - 23: {fileID: 23000012655248404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shoulder_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - 4: {fileID: 4000012239243150}
   - 33: {fileID: 33000013249216290}
   - 23: {fileID: 23000013250571036}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: knee_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - 4: {fileID: 4000010674902736}
   - 33: {fileID: 33000011700481594}
   - 23: {fileID: 23000011263717330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   - 4: {fileID: 4000011308343800}
   - 33: {fileID: 33000010557260030}
   - 23: {fileID: 23000012430344646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shoulder_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,9 @@ GameObject:
   - 95: {fileID: 95000012062855916}
   - 54: {fileID: 54000012987081058}
   - 114: {fileID: 114000012538929162}
-  m_Layer: 0
+  - 136: {fileID: 136000012433532446}
+  - 114: {fileID: 114000011249072564}
+  m_Layer: 8
   m_Name: row_test01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +400,7 @@ GameObject:
   - 4: {fileID: 4000012272356584}
   - 33: {fileID: 33000014187955934}
   - 23: {fileID: 23000013337058184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: knee_armer_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +417,7 @@ GameObject:
   - 4: {fileID: 4000014037773858}
   - 33: {fileID: 33000011651705456}
   - 23: {fileID: 23000010830935358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stomach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +434,7 @@ GameObject:
   - 4: {fileID: 4000012569675656}
   - 33: {fileID: 33000010417414998}
   - 23: {fileID: 23000012428014586}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: heel_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +451,7 @@ GameObject:
   - 4: {fileID: 4000010956741488}
   - 33: {fileID: 33000011686838886}
   - 23: {fileID: 23000010576464222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: knee_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +468,7 @@ GameObject:
   - 4: {fileID: 4000012492496320}
   - 33: {fileID: 33000011083727376}
   - 23: {fileID: 23000013453285746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: toe1_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +485,7 @@ GameObject:
   - 4: {fileID: 4000013266063552}
   - 33: {fileID: 33000010812239306}
   - 23: {fileID: 23000012296497448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hand_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +502,7 @@ GameObject:
   - 4: {fileID: 4000010940253390}
   - 33: {fileID: 33000010297304788}
   - 23: {fileID: 23000011748542376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: leg_armer_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +519,7 @@ GameObject:
   - 4: {fileID: 4000012626918822}
   - 33: {fileID: 33000012684364426}
   - 23: {fileID: 23000013587777072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: arm_armer_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +536,7 @@ GameObject:
   - 4: {fileID: 4000013834472236}
   - 33: {fileID: 33000011000093310}
   - 23: {fileID: 23000013598565116}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +553,7 @@ GameObject:
   - 4: {fileID: 4000010944261158}
   - 33: {fileID: 33000010236023204}
   - 23: {fileID: 23000010914876900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: upper_arm_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +570,7 @@ GameObject:
   - 4: {fileID: 4000011917909892}
   - 33: {fileID: 33000013710947932}
   - 23: {fileID: 23000011946866024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: thigh_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +587,7 @@ GameObject:
   - 4: {fileID: 4000011178585864}
   - 33: {fileID: 33000011707326600}
   - 23: {fileID: 23000010582831032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: thigh_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,7 +984,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012505048712}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2323,6 +2325,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000011249072564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012505048712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb99bfaee43304a7aa06e5e1b6291fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1000013187159200, guid: f9608437a9c16412481487241d000473, type: 2}
+  shotDelay: 0.1
+  canShot: 1
+  explosion: {fileID: 0}
 --- !u!114 &114000012538929162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2336,4 +2353,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rotSpeed: 1
-  bullet: {fileID: 1000013187159200, guid: f9608437a9c16412481487241d000473, type: 2}
+--- !u!136 &136000012433532446
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012505048712}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.03
+  m_Height: 0.1
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.03, z: 0}

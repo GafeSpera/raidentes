@@ -24,7 +24,7 @@ GameObject:
   - 23: {fileID: 23000013405145524}
   - 54: {fileID: 54000011612836872}
   - 114: {fileID: 114000013028502244}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011827150248}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 23: {fileID: 23000010911178324}
   - 54: {fileID: 54000012337996512}
   - 114: {fileID: 114000010533856688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

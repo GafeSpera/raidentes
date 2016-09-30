@@ -24,7 +24,7 @@ GameObject:
   - 23: {fileID: 23000010922502648}
   - 114: {fileID: 114000011785407462}
   - 54: {fileID: 54000013756393232}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
