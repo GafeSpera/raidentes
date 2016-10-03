@@ -12,6 +12,6 @@ public class scroll : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//すこしずつ前進
-		transform.Translate (-scrollSpeed,0,0);
+		transform.Translate (scrollSpeed,0,0);
 	}
 }
