@@ -733,21 +733,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 136000012433532446, guid: 319c5a403514945a5b55abeb2e237a43,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000012987081058, guid: 319c5a403514945a5b55abeb2e237a43,
-        type: 2}
-      propertyPath: m_Drag
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000012987081058, guid: 319c5a403514945a5b55abeb2e237a43,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 114
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 319c5a403514945a5b55abeb2e237a43, type: 2}
   m_IsPrefabParent: 0
@@ -766,7 +751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1940257507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,6 +766,7 @@ MonoBehaviour:
   waves:
   - {fileID: 1000010317242634, guid: bf06f403aed96435f86d962bf8841b7b, type: 2}
   - {fileID: 1000012916519874, guid: b4d313496b9c8481089a9025a241de53, type: 2}
+  - {fileID: 1000013190013276, guid: a361d08ed032f4789afd790312ebe7ca, type: 2}
   - {fileID: 1000013190013276, guid: a361d08ed032f4789afd790312ebe7ca, type: 2}
 --- !u!4 &1940257508
 Transform:

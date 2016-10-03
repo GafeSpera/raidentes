@@ -8,8 +8,6 @@ public class Enemy : MonoBehaviour {
 	public int hp = 4;
 
 	IEnumerator Start () {
-		//移動
-		GetComponent<Rigidbody> ().velocity = transform.right * speed;
 
 		//Unitコンポーネントを取得
 		unit = GetComponent<Unit> ();

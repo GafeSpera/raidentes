@@ -36,10 +36,10 @@ public class player : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		hp --;
+		//hp --;
 		//unit.Explosion ();
 		if (hp == 0) {
-			Destroy (gameObject);
+			//Destroy (gameObject);
 		}
 	}
 	void OnCollisionEnter(Collision col){
@@ -50,6 +50,7 @@ public class player : MonoBehaviour {
 			Destroy (col.gameObject);
 		}
 
+		//色を赤くする
 		iTween.ColorFrom (gameObject, iTween.Hash (
 			"color", new Color (255, 0, 0),
 			"time", 0.1f,
