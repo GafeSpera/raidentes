@@ -43,14 +43,22 @@ public class player : MonoBehaviour {
 		}
 	}
 	void OnCollisionEnter(Collision col){
+
+		//衝突したものが弾だった場合、弾を削除
+		string layerName = LayerMask.LayerToName (col.gameObject.layer);
+		if (layerName == "Bullet(Enemy)") {
+			Destroy (col.gameObject);
+		}
+
 		iTween.ColorFrom (gameObject, iTween.Hash (
 			"color", new Color (255, 0, 0),
-			"time", 0.01f,
+			"time", 0.1f,
 			"delay", 0.01f
 		));
+
 		hp --;
 		//unit.Explosion ();
-		if (hp == 0) {
+		if (hp <= 0) {
 			Destroy (gameObject);
 		}
 	}
