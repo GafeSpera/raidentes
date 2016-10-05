@@ -13,6 +13,17 @@ public class Unit : MonoBehaviour {
 	}
 
 	public void Shot(Transform origin){
-		Instantiate (bullet, origin.position, origin.rotation);
+		if (canShot) {
+			Instantiate (bullet, origin.position, origin.rotation);
+		}
+	}
+
+	public void Damage(){
+		//色を赤くする
+		iTween.ColorFrom (gameObject, iTween.Hash (
+			"color", new Color (255, 0, 0),
+			"time", 0.1f,
+			"delay", 0.01f
+		));
 	}
 }

@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour {
 	Unit unit;
 	public float speed = 10;
 	public int hp = 4;
+	//ダメージを受けたとき無敵時間を作る
+	int damageTime = 10;
 
 	IEnumerator Start () {
 
@@ -25,19 +27,22 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col) {
-		//レイヤー名を取得
-		string layerName = LayerMask.LayerToName (col.gameObject.layer);
-		//レイヤー名がBullet(Player)以外の時は何も行わない
-		if(layerName != "Bullet(Player)")return;
-		iTween.ColorFrom (gameObject, iTween.Hash (
-			"color", new Color (255, 0, 0),
-			"time", 0.5f,
-			"delay", 0.01f
-		));
-		hp--;
-		if (hp <= 0) {
-			//unit.Explosion();
-			Destroy (gameObject);
+		if(damageTime <= 0){
+			//レイヤー名を取得
+			string layerName = LayerMask.LayerToName (col.gameObject.layer);
+			//レイヤー名がBullet(Player)以外の時は何も行わない
+			if(layerName != "Bullet(Player)")return;
+			unit.Damage();
+			hp--;
+			if (hp <= 0) {
+				//unit.Explosion();
+				Destroy (gameObject);
+			}
+			damageTime=10;
 		}
+	}
+
+	void Update(){
+		damageTime--;
 	}
 }

@@ -25,6 +25,7 @@ GameObject:
   - 114: {fileID: 114000012237164078}
   - 54: {fileID: 54000013321524628}
   - 114: {fileID: 114000011490612544}
+  - 114: {fileID: 114000010711853934}
   m_Layer: 9
   m_Name: 'Enemy '
   m_TagString: Untagged
@@ -46,6 +47,7 @@ GameObject:
   - 114: {fileID: 114000014221473962}
   - 54: {fileID: 54000012203688242}
   - 114: {fileID: 114000014189680258}
+  - 114: {fileID: 114000012049632536}
   m_Layer: 9
   m_Name: 'Enemy '
   m_TagString: Untagged
@@ -67,6 +69,7 @@ GameObject:
   - 114: {fileID: 114000012088008512}
   - 54: {fileID: 54000010775247794}
   - 114: {fileID: 114000012741154498}
+  - 114: {fileID: 114000013019946506}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -148,6 +151,7 @@ GameObject:
   - 114: {fileID: 114000014087604200}
   - 54: {fileID: 54000011299113584}
   - 114: {fileID: 114000013365984464}
+  - 114: {fileID: 114000013209107868}
   m_Layer: 9
   m_Name: 'Enemy '
   m_TagString: Untagged
@@ -319,6 +323,7 @@ GameObject:
   - 114: {fileID: 114000012758467222}
   - 54: {fileID: 54000011654891820}
   - 114: {fileID: 114000013919759604}
+  - 114: {fileID: 114000012610132054}
   m_Layer: 9
   m_Name: 'Enemy '
   m_TagString: Untagged
@@ -400,6 +405,7 @@ GameObject:
   - 114: {fileID: 114000010703178554}
   - 54: {fileID: 54000011289547060}
   - 114: {fileID: 114000011649679104}
+  - 114: {fileID: 114000012545980792}
   m_Layer: 9
   m_Name: 'Enemy '
   m_TagString: Untagged
@@ -1090,6 +1096,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   hp: 10
+--- !u!114 &114000010711853934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010051742346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7c82b0c2d1b4197867c83179608fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
 --- !u!114 &114000011490612544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1120,6 +1138,18 @@ MonoBehaviour:
   shotDelay: 1
   canShot: 0
   explosion: {fileID: 0}
+--- !u!114 &114000012049632536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010126551462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7c82b0c2d1b4197867c83179608fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
 --- !u!114 &114000012088008512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1146,6 +1176,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   hp: 10
+--- !u!114 &114000012545980792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014077424252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7c82b0c2d1b4197867c83179608fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+--- !u!114 &114000012610132054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012930030048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7c82b0c2d1b4197867c83179608fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
 --- !u!114 &114000012741154498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1174,6 +1228,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   hp: 10
+--- !u!114 &114000013019946506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010166957056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7c82b0c2d1b4197867c83179608fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+--- !u!114 &114000013209107868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010796821346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7c82b0c2d1b4197867c83179608fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
 --- !u!114 &114000013365984464
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,6 +9,9 @@ public class player : MonoBehaviour {
 	//向きを変える速度
 	public float rotSpeed = 1.5f;
 	int hp = 5;
+	//ダメージを受けたとき無敵時間を作る
+	int damageTime = 10;
+	bool live = true;
 
 	//Startメソッドをコルーチンとして呼び出す
 	IEnumerator Start() {
@@ -23,16 +26,19 @@ public class player : MonoBehaviour {
 	}
 
 	void Update() {
+
+		damageTime--;
 		//移動
 		float x = Input.GetAxisRaw("Horizontal");
 		float y = Input.GetAxisRaw("Vertical");
 		Rigidbody rigidbody = GetComponent<Rigidbody>();
-		rigidbody.AddForce(0, y * speed, x * speed);
-
-		//移動方向に体の向きを変える
-		transform.Rotate(0, x * rotSpeed, -y * rotSpeed);
-		//体の向きを戻す
-		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, Time.deltaTime);
+		if (unit.canShot) {
+			rigidbody.AddForce (0, y * speed, x * speed);
+			//移動方向に体の向きを変える
+			transform.Rotate (0, x * rotSpeed, -y * rotSpeed);
+			//体の向きを戻す
+			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.identity, Time.deltaTime);
+		}
 	}
 
 	void OnTriggerEnter(Collider col){
@@ -43,24 +49,24 @@ public class player : MonoBehaviour {
 		}
 	}
 	void OnCollisionEnter(Collision col){
-
-		//衝突したものが弾だった場合、弾を削除
-		string layerName = LayerMask.LayerToName (col.gameObject.layer);
-		if (layerName == "Bullet(Enemy)") {
-			Destroy (col.gameObject);
-		}
-
-		//色を赤くする
-		iTween.ColorFrom (gameObject, iTween.Hash (
-			"color", new Color (255, 0, 0),
-			"time", 0.1f,
-			"delay", 0.01f
-		));
-
-		hp --;
-		//unit.Explosion ();
-		if (hp <= 0) {
-			Destroy (gameObject);
+		if(damageTime <= 0){
+			//衝突したものが弾だった場合、弾を削除
+			string layerName = LayerMask.LayerToName (col.gameObject.layer);
+			if (layerName == "Bullet(Enemy)") {
+				Destroy (col.gameObject);
+			}
+			unit.Damage();
+				
+			hp --;
+			//unit.Explosion ();
+			if (hp <= 0) {
+				unit.canShot = false;
+				Rigidbody rigidbody = GetComponent<Rigidbody>();
+				rigidbody.useGravity = true;
+				rigidbody.constraints = RigidbodyConstraints.None;
+				//Destroy (gameObject);
+			}
+			damageTime = 10;
 		}
 	}
 }
