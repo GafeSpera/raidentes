@@ -1095,7 +1095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  hp: 10
+  hp: 5
 --- !u!114 &114000010711853934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  hp: 10
+  hp: 5
 --- !u!114 &114000012237164078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  hp: 10
+  hp: 5
 --- !u!114 &114000012545980792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  hp: 10
+  hp: 5
 --- !u!114 &114000013019946506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1294,7 +1294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  hp: 10
+  hp: 5
 --- !u!114 &114000014189680258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  hp: 10
+  hp: 5
 --- !u!135 &135000010751687742
 SphereCollider:
   m_ObjectHideFlags: 1

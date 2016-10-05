@@ -40,6 +40,7 @@ GameObject:
   - 114: {fileID: 114000010408871666}
   - 54: {fileID: 54000011660549430}
   - 114: {fileID: 114000010973247990}
+  - 114: {fileID: 114000012239055804}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -106,6 +107,7 @@ GameObject:
   - 114: {fileID: 114000010878797714}
   - 54: {fileID: 54000010895152432}
   - 114: {fileID: 114000011223808946}
+  - 114: {fileID: 114000013527738538}
   m_Layer: 9
   m_Name: 'Enemy '
   m_TagString: Untagged
@@ -142,6 +144,7 @@ GameObject:
   - 114: {fileID: 114000011694468494}
   - 54: {fileID: 54000010721327614}
   - 114: {fileID: 114000011422169930}
+  - 114: {fileID: 114000010039415160}
   m_Layer: 9
   m_Name: 'Enemy '
   m_TagString: Untagged
@@ -645,6 +648,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &114000010039415160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011588624004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7c82b0c2d1b4197867c83179608fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!114 &114000010408871666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -657,7 +672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  hp: 30
+  hp: 20
 --- !u!114 &114000010878797714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -670,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  hp: 30
+  hp: 20
 --- !u!114 &114000010973247990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -728,7 +743,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  hp: 30
+  hp: 20
+--- !u!114 &114000012239055804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010074934502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7c82b0c2d1b4197867c83179608fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &114000013527738538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010938781890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7c82b0c2d1b4197867c83179608fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!135 &135000011416488540
 SphereCollider:
   m_ObjectHideFlags: 1
