@@ -685,7 +685,7 @@ MonoBehaviour:
   bullet: {fileID: 1000011591027348, guid: a702d25f911f349dab8ac85c8f00aa76, type: 2}
   shotDelay: 0.5
   canShot: 1
-  explosion: {fileID: 0}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!114 &114000011223808946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -700,7 +700,7 @@ MonoBehaviour:
   bullet: {fileID: 1000011591027348, guid: a702d25f911f349dab8ac85c8f00aa76, type: 2}
   shotDelay: 0.5
   canShot: 1
-  explosion: {fileID: 0}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!114 &114000011422169930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -715,7 +715,7 @@ MonoBehaviour:
   bullet: {fileID: 1000011591027348, guid: a702d25f911f349dab8ac85c8f00aa76, type: 2}
   shotDelay: 0.5
   canShot: 1
-  explosion: {fileID: 0}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!114 &114000011694468494
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,21 +5,23 @@ public class player : MonoBehaviour {
 
 	Unit unit;
 	//移動速度
-	public float speed = 10;
+	public float speed = 40;
 	//向きを変える速度
 	public float rotSpeed = 1.5f;
 	public int hp = 5;
 	//ダメージを受けたとき無敵時間を作る
 	int damageTime = 10;
 	bool live = true;
+	private GameObject chl;
 
 	//Startメソッドをコルーチンとして呼び出す
 	IEnumerator Start() {
 		//Unitコンポーネントを取得
 		unit = GetComponent<Unit> ();
+		chl = transform.FindChild ("row_test01").gameObject;
 		while (true) {
 			//弾をプレイヤーと同じ位置/角度で作成
-			unit.Shot(transform);
+			unit.Shot(chl.transform);
 			//0.05秒待つ
 			yield return new WaitForSeconds(unit.shotDelay);
 		}
@@ -28,26 +30,21 @@ public class player : MonoBehaviour {
 	void Update() {
 
 		damageTime--;
+
 		//移動
-		float x = Input.GetAxisRaw("Horizontal");
-		float y = Input.GetAxisRaw("Vertical");
-		Rigidbody rigidbody = GetComponent<Rigidbody>();
-		if (unit.canShot) {
-			rigidbody.AddForce (0, y * speed, x * speed);
-			//移動方向に体の向きを変える
-			transform.Rotate (0, x * rotSpeed, -y * rotSpeed);
-			//体の向きを戻す
-			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.identity, Time.deltaTime);
-		}
+		float x = Input.GetAxisRaw ("Horizontal");
+		float y = Input.GetAxisRaw ("Vertical");
+		//transform.Translate (0, y * speed, x * speed);
+		//Vector3 fwd = transform.forward * x * speed;
+		//Vector3 up = transform.up * y * speed;
+		Rigidbody rb = GetComponent<Rigidbody> ();
+		rb.AddForce (transform.up * y * speed);
+		rb.AddForce (transform.forward * x * speed);
+		//rb.AddForce (fwd);
+		//rb.AddForce (up);
+
 	}
 
-	void OnTriggerEnter(Collider col){
-		//hp --;
-		//unit.Explosion ();
-		if (hp == 0) {
-			//Destroy (gameObject);
-		}
-	}
 	void OnCollisionEnter(Collision col){
 		if(damageTime <= 0){
 			string layerName = LayerMask.LayerToName (col.gameObject.layer);
@@ -60,7 +57,7 @@ public class player : MonoBehaviour {
 			unit.Damage();
 				
 			hp --;
-			//unit.Explosion ();
+			unit.Explosion ();
 			if (hp <= 0) {
 				unit.canShot = false;
 				Rigidbody rigidbody = GetComponent<Rigidbody>();

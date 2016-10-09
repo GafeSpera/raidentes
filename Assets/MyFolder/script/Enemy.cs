@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour {
 		}
 		Destroy (col.gameObject);
 		if (hp <= 0) {
-			//unit.Explosion();
+			unit.Explosion();
 			Destroy (gameObject);
 		}
 	}

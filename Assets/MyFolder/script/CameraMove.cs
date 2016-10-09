@@ -7,7 +7,8 @@ public class CameraMove : MonoBehaviour {
 	public GameObject[] pos;
 	public Vector3[] movePath;
 	int currentPath = 0;
-	public float speed = 50f;
+	//各地点間をいくらかけて移動すか
+	public float time = 50f;
 
 	void Start () {
 		for (int j = 0; j < pos.Length; j++) {
@@ -18,10 +19,9 @@ public class CameraMove : MonoBehaviour {
 			iTween.MoveTo (gameObject, iTween.Hash (
 				"path", movePath,
 				"orienttopath", true,
-				"speed", speed,
+				"time", time,
 				"easetype", iTween.EaseType.easeInOutQuad
 			));
-			currentPath++;
 			//if (pos.Length <= currentPath) {
 			//	currentPath = 0;
 			//}

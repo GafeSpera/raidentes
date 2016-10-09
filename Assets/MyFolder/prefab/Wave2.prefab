@@ -1122,7 +1122,7 @@ MonoBehaviour:
   bullet: {fileID: 1000011591027348, guid: a702d25f911f349dab8ac85c8f00aa76, type: 2}
   shotDelay: 1
   canShot: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!114 &114000011649679104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1137,7 +1137,7 @@ MonoBehaviour:
   bullet: {fileID: 1000011591027348, guid: a702d25f911f349dab8ac85c8f00aa76, type: 2}
   shotDelay: 1
   canShot: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!114 &114000012049632536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   bullet: {fileID: 1000011591027348, guid: a702d25f911f349dab8ac85c8f00aa76, type: 2}
   shotDelay: 1
   canShot: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!114 &114000012758467222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1266,7 +1266,7 @@ MonoBehaviour:
   bullet: {fileID: 1000011591027348, guid: a702d25f911f349dab8ac85c8f00aa76, type: 2}
   shotDelay: 1
   canShot: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!114 &114000013919759604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   bullet: {fileID: 1000011591027348, guid: a702d25f911f349dab8ac85c8f00aa76, type: 2}
   shotDelay: 1
   canShot: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!114 &114000014087604200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   bullet: {fileID: 1000011591027348, guid: a702d25f911f349dab8ac85c8f00aa76, type: 2}
   shotDelay: 1
   canShot: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!114 &114000014221473962
 MonoBehaviour:
   m_ObjectHideFlags: 1
