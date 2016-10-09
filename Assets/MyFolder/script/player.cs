@@ -57,7 +57,7 @@ public class player : MonoBehaviour {
 			}
 			unit.Damage();
 				
-			hp --;
+			//hp --;
 			//unit.Explosion ();
 			if (hp <= 0) {
 				unit.canShot = false;
