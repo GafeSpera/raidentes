@@ -22,7 +22,7 @@ public class Unit : MonoBehaviour {
 		//色を赤くする
 		iTween.ColorFrom (gameObject, iTween.Hash (
 			"color", new Color (255, 0, 0),
-			"time", 0.1f,
+			"time", 0.2f,
 			"delay", 0.01f
 		));
 	}
