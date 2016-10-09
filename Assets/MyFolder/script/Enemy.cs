@@ -27,18 +27,18 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col) {
+		//レイヤー名を取得
+		string layerName = LayerMask.LayerToName (col.gameObject.layer);
+		//レイヤー名がBullet(Player)以外の時は何も行わない
+		if(layerName != "Bullet(Player)")return;
+		hp--;
 		if(damageTime <= 0){
-			//レイヤー名を取得
-			string layerName = LayerMask.LayerToName (col.gameObject.layer);
-			//レイヤー名がBullet(Player)以外の時は何も行わない
-			if(layerName != "Bullet(Player)")return;
 			unit.Damage();
-			hp--;
-			if (hp <= 0) {
-				//unit.Explosion();
-				Destroy (gameObject);
-			}
 			damageTime=10;
+		}
+		if (hp <= 0) {
+			//unit.Explosion();
+			Destroy (gameObject);
 		}
 	}
 

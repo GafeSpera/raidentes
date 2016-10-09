@@ -8,7 +8,7 @@ public class player : MonoBehaviour {
 	public float speed = 10;
 	//向きを変える速度
 	public float rotSpeed = 1.5f;
-	int hp = 5;
+	public int hp = 5;
 	//ダメージを受けたとき無敵時間を作る
 	int damageTime = 10;
 	bool live = true;
@@ -50,20 +50,23 @@ public class player : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision col){
 		if(damageTime <= 0){
-			//衝突したものが弾だった場合、弾を削除
 			string layerName = LayerMask.LayerToName (col.gameObject.layer);
+			//衝突したものが敵以外の時は何も行わない
+			if(layerName != "Bullet(Enemy)" && layerName != "Enemy")return;
+			//衝突したものが弾だった場合、弾を削除
 			if (layerName == "Bullet(Enemy)") {
 				Destroy (col.gameObject);
 			}
 			unit.Damage();
 				
-			//hp --;
+			hp --;
 			//unit.Explosion ();
 			if (hp <= 0) {
 				unit.canShot = false;
 				Rigidbody rigidbody = GetComponent<Rigidbody>();
 				rigidbody.useGravity = true;
 				rigidbody.constraints = RigidbodyConstraints.None;
+				GetComponent<CapsuleCollider> ().enabled = false;
 				//Destroy (gameObject);
 			}
 			damageTime = 10;
