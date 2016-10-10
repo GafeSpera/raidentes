@@ -19,7 +19,8 @@ public class CameraMove : MonoBehaviour {
 				"path", movePath,
 				"orienttopath", true,
 				"time", time,
-				"easetype", iTween.EaseType.easeInOutQuad
+				"easetype", iTween.EaseType.easeInOutQuad,
+				"loopType", "loop"
 			));
 	}
 
