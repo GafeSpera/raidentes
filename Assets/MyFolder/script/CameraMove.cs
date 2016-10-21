@@ -7,7 +7,7 @@ public class CameraMove : MonoBehaviour {
 	public GameObject[] pos;
 	private Vector3[] movePath;
 	int currentPath = 0;
-	//各地点間をいくらかけて移動すか
+	//各地点間をいくらかけて移動するか
 	public float time = 30f;
 
 	void Start () {

@@ -14,7 +14,7 @@ public class Emitter : MonoBehaviour {
 		}
 
 		while (true) {
-			GameObject wave = (GameObject)Instantiate (waves [currentWave], transform.position, Quaternion.identity);
+			GameObject wave = (GameObject)Instantiate (waves [currentWave], transform.position, transform.rotation);
 			wave.transform.parent = transform;
 
 			while (wave.transform.childCount != 0) {

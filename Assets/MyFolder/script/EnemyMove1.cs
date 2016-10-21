@@ -7,11 +7,11 @@ public class EnemyMove1 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//まっすぐ前方に
-		GetComponent<Rigidbody> ().velocity = transform.right * speed;
+		//GetComponent<Rigidbody> ().velocity = transform.right * speed;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		transform.Translate (speed, speed, speed);
 	}
 }
