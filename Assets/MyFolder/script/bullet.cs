@@ -11,7 +11,7 @@ public class bullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		time = 0;
-		GetComponent<Rigidbody>().velocity = -transform.right * speed;
+		GetComponent<Rigidbody>().velocity = -transform.forward * speed;
 		Destroy (gameObject, lifeTime);
     }
 

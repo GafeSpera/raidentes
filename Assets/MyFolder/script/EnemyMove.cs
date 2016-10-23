@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraMove : MonoBehaviour {
+public class EnemyMove : MonoBehaviour {
 
 	//通ってゆく地点
 	public GameObject[] pos;
@@ -15,13 +15,11 @@ public class CameraMove : MonoBehaviour {
 		for (int j = 0; j < pos.Length; j++) {
 			movePath [j] = pos [j].transform.position;
 		}
-			iTween.MoveTo (gameObject, iTween.Hash (
-				"path", movePath,
-				"orienttopath", true,
-				"time", time,
-				"easetype", iTween.EaseType.easeInOutQuad
-				//"loopType", "loop"
-			));
+		iTween.MoveTo (gameObject, iTween.Hash (
+			"path", movePath,
+			"time", time,
+			"easetype", iTween.EaseType.easeInOutQuad
+		));
 	}
 
 	void Update () {

@@ -23,7 +23,7 @@ GameObject:
   - 135: {fileID: 135000014275026958}
   - 23: {fileID: 23000013405145524}
   - 54: {fileID: 54000011612836872}
-  - 114: {fileID: 114000013028502244}
+  - 114: {fileID: 114000013191395158}
   m_Layer: 10
   m_Name: bullet
   m_TagString: Untagged
@@ -39,8 +39,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011827150248}
-  - 114: {fileID: 114000011539562284}
   - 54: {fileID: 54000010579977998}
+  - 114: {fileID: 114000010673575712}
   m_Layer: 10
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -60,7 +60,7 @@ GameObject:
   - 135: {fileID: 135000011355600274}
   - 23: {fileID: 23000010911178324}
   - 54: {fileID: 54000012337996512}
-  - 114: {fileID: 114000010533856688}
+  - 114: {fileID: 114000014286020026}
   m_Layer: 10
   m_Name: bullet
   m_TagString: Untagged
@@ -226,20 +226,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000010533856688
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013895069728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0399b741ee0e04632a40294442d1a38c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 600
-  lifeTime: 5
---- !u!114 &114000011539562284
+--- !u!114 &114000010673575712
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -247,12 +234,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013187159200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0399b741ee0e04632a40294442d1a38c, type: 3}
+  m_Script: {fileID: 11500000, guid: b5dd0217fc8eb44a69fa8263aff168e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
   lifeTime: 5
---- !u!114 &114000013028502244
+--- !u!114 &114000013191395158
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -260,10 +247,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010304948008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0399b741ee0e04632a40294442d1a38c, type: 3}
+  m_Script: {fileID: 11500000, guid: b5dd0217fc8eb44a69fa8263aff168e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 600
+  speed: 900
+  lifeTime: 5
+--- !u!114 &114000014286020026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013895069728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5dd0217fc8eb44a69fa8263aff168e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 900
   lifeTime: 5
 --- !u!135 &135000011355600274
 SphereCollider:

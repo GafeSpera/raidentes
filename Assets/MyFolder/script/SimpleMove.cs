@@ -6,14 +6,13 @@ public class SimpleMove : MonoBehaviour {
 	public float y = 0f;
 	public float z = 0f;
 
-	//弾を消す時間
 	public float lifeTime = 30f;
 
-	// Use this for initialization
-	void Start () {
-		GetComponent<Rigidbody>().velocity = transform.right * z;
-		GetComponent<Rigidbody>().velocity = transform.up * y;
-		GetComponent<Rigidbody>().velocity = transform.forward * x;
+	void Start(){
 		Destroy (gameObject, lifeTime);
+	}
+	// Use this for initialization
+	void Update(){
+		transform.Translate (x,y,z);
 	}
 }

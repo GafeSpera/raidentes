@@ -10,7 +10,7 @@ public class player : MonoBehaviour {
 	public float speed = 60;
 	public int hp = 5;
 	//ダメージを受けたとき無敵時間を作る
-	int damageTime = 60;
+	int damageTime = 20;
 	public GameObject chl;
 	public bool p2 = false;
 
@@ -85,7 +85,7 @@ public class player : MonoBehaviour {
 				rigidbody.useGravity = true;
 				rigidbody.constraints = RigidbodyConstraints.None;
 			}
-			damageTime = 60;
+			damageTime = 20;
 		}
 	}
 
@@ -107,7 +107,7 @@ public class player : MonoBehaviour {
 				rigidbody.useGravity = true;
 				rigidbody.constraints = RigidbodyConstraints.None;
 			}
-			damageTime = 60;
+			damageTime = 20;
 		}
 	}
 }
