@@ -12,9 +12,22 @@ public class Unit : MonoBehaviour {
 		Instantiate (explosion, transform.position, transform.rotation);
 	}
 
-	public void Shot(Transform origin){
+	public void Shot(Transform origin, bool enemy){
 		if (canShot) {
-			Instantiate (bullet, origin.position, origin.rotation);
+			if (enemy) {
+				float x = Random.value * 0.05f - 0.025f;
+				float y = Random.value * 0.05f - 0.025f;
+				float z = Random.value * 0.05f - 0.025f;
+
+				Quaternion rot = origin.rotation;
+				rot.x += x;
+				rot.y += y;
+				rot.z += z;
+
+				Instantiate (bullet, origin.position, rot);
+			} else {
+				Instantiate (bullet, origin.position, origin.rotation);
+			}
 		}
 	}
 

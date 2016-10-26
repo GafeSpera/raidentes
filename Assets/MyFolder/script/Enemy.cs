@@ -9,8 +9,12 @@ public class Enemy : MonoBehaviour {
 	//ダメージを受けたとき無敵時間を作る
 	int damageTime = 20;
 	public bool boss = false;
-	public int childC = 3;
+	public int childC = 9;
 	public GameObject par;
+
+	public float shotStart;
+	public float shotEnd;
+	public int count = 0;
 
 	IEnumerator Start () {
 
@@ -20,12 +24,14 @@ public class Enemy : MonoBehaviour {
 		if (unit.canShot == false) {
 			yield break;
 		}
-		while (true) {
-			for (int i = 0; i < childC; i++) {
-				Transform shotPosition = transform.GetChild (i);
-				unit.Shot (shotPosition);
+		if (shotStart <= count && count <= shotEnd) {
+			while (true) {
+				for (int i = 0; i < childC; i++) {
+					Transform shotPosition = transform.GetChild (i);
+					unit.Shot (shotPosition, true);
+				}
+				yield return new WaitForSeconds (unit.shotDelay);
 			}
-			yield return new WaitForSeconds (unit.shotDelay);
 		}
 	}
 
@@ -43,7 +49,7 @@ public class Enemy : MonoBehaviour {
 			}
 		}
 		Destroy (col.gameObject);
-		if (hp <= 0) {
+		if (hp == 0) {
 			unit.Explosion ();
 			if (boss == false && text != "BossParts") {
 				Destroy (gameObject);
@@ -52,12 +58,14 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void Update(){
+		count++;
 		damageTime--;
 
 		string text = LayerMask.LayerToName (gameObject.layer);
 		if (hp <= 0) {
 			if (text == "BossParts") {
 				par.transform.Translate (0, -1, 0);
+				par.transform.parent = null;
 			}
 		}
 	}

@@ -21,7 +21,7 @@ public class player : MonoBehaviour {
 		//chl = transform.FindChild ("bul").gameObject;
 		while (true) {
 			//弾をプレイヤーと同じ位置/角度で作成
-			unit.Shot(chl.transform);
+			unit.Shot(chl.transform,false);
 			//0.05秒待つ
 			yield return new WaitForSeconds(unit.shotDelay);
 		}
