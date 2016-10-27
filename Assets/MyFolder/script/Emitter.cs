@@ -23,8 +23,8 @@ public class Emitter : MonoBehaviour {
 
 			Destroy (wave);
 
-			if (waves.Length <= ++currentWave) {
-				currentWave = 0;
+			if (currentWave < waves.Length-1) {
+				currentWave++;
 			}
 		}
 	}

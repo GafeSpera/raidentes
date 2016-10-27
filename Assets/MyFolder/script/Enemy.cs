@@ -13,8 +13,9 @@ public class Enemy : MonoBehaviour {
 	public GameObject par;
 
 	public float shotStart;
-	public float shotEnd;
-	public int count = 0;
+	public GameObject deathBoss;
+	public GameObject bossObj;
+	int expCount = 0;
 
 	IEnumerator Start () {
 
@@ -24,14 +25,12 @@ public class Enemy : MonoBehaviour {
 		if (unit.canShot == false) {
 			yield break;
 		}
-		if (shotStart <= count && count <= shotEnd) {
-			while (true) {
-				for (int i = 0; i < childC; i++) {
-					Transform shotPosition = transform.GetChild (i);
-					unit.Shot (shotPosition, true);
-				}
-				yield return new WaitForSeconds (unit.shotDelay);
+		while (true) {
+			for (int i = 0; i < childC; i++) {
+				Transform shotPosition = transform.GetChild (i);
+				unit.Shot (shotPosition, true);
 			}
+			yield return new WaitForSeconds (unit.shotDelay);
 		}
 	}
 
@@ -41,24 +40,56 @@ public class Enemy : MonoBehaviour {
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 		//レイヤー名がBullet(Player)以外の時は何も行わない
 		if(layerName != "Bullet(Player)")return;
-		hp--;
 		if (boss == false) {
+			hp--;
 			if (damageTime <= 0) {
-				unit.Damage ();
-				damageTime = 20;
+				if (hp > 0) {
+					unit.Damage ();
+					damageTime = 20;
+				}
+			}
+		} else {
+			if (transform.childCount == 4) {
+				hp--;
+				if (damageTime <= 0) {
+					if (hp > 0) {
+						unit.Damage ();
+						damageTime = 20;
+					}
+				}
 			}
 		}
 		Destroy (col.gameObject);
-		if (hp == 0) {
-			unit.Explosion ();
-			if (boss == false && text != "BossParts") {
-				Destroy (gameObject);
+		if (hp <= 0) {
+			if (boss == false && hp==0) {
+				unit.Explosion ();
+				if (text != "BossParts") {
+					Destroy (gameObject);
+				}
+			} else if (boss == true) {
+				unit.canShot = false;
+				Rigidbody rigidbody = bossObj.GetComponent<Rigidbody>();
+				rigidbody.useGravity = true;
+				rigidbody.constraints = RigidbodyConstraints.None;
+				if (expCount == 0) {
+					float x = Random.value * 100 - 50;
+					float y = Random.value * 100 - 50;
+					float z = Random.value * 100 - 50;
+
+					Vector3 pos = transform.position;
+					pos.x += x;
+					pos.y += y;
+					pos.z += z;
+
+					Instantiate (unit.explosion, pos, transform.rotation);
+					expCount = 5;
+				}
+				expCount--;
 			}
 		}
 	}
 
 	void Update(){
-		count++;
 		damageTime--;
 
 		string text = LayerMask.LayerToName (gameObject.layer);
@@ -66,6 +97,8 @@ public class Enemy : MonoBehaviour {
 			if (text == "BossParts") {
 				par.transform.Translate (0, -1, 0);
 				par.transform.parent = null;
+			} else if (boss) {
+				bossObj.transform.Translate (1,0,0);
 			}
 		}
 	}
