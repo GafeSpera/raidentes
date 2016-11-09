@@ -29,9 +29,13 @@ public class J2Player : MonoBehaviour {
 	}
 
 	void Update(){
+		timeElapsed += Time.deltaTime;
+		if (timeElapsed >= timeOut) {
 
-		rb.AddForce (transform.right * cl.x2 * 200);
-		rb.AddForce (transform.up * cl.y2 * 200);
+			rb.AddForce (transform.right * cl.x2 * 200);
+			rb.AddForce (transform.up * cl.y2 * 200);
+
+		}
 	}
 
 }
