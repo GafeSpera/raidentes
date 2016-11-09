@@ -3797,6 +3797,8 @@ MonoBehaviour:
   childC: 3
   par: {fileID: 0}
   shotStart: 5
+  deathBoss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!114 &114000010124198242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4179,6 +4181,8 @@ MonoBehaviour:
   childC: 3
   par: {fileID: 0}
   shotStart: 5
+  deathBoss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!114 &114000012517301434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4287,6 +4291,8 @@ MonoBehaviour:
   childC: 3
   par: {fileID: 0}
   shotStart: 5
+  deathBoss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!114 &114000012912092168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4337,6 +4343,8 @@ MonoBehaviour:
   childC: 3
   par: {fileID: 0}
   shotStart: 5
+  deathBoss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!114 &114000013224409124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4387,6 +4395,8 @@ MonoBehaviour:
   childC: 3
   par: {fileID: 0}
   shotStart: 5
+  deathBoss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!114 &114000013482879040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4539,7 +4549,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013485917384}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.7
@@ -4551,7 +4561,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013103951616}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.7
@@ -4563,7 +4573,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012056637832}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.7
@@ -4575,7 +4585,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012155102064}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.7
@@ -4587,7 +4597,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010721104390}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.7

@@ -7,9 +7,17 @@ public class ClientExample: MonoBehaviour {
 
 	WebSocket ws;
 
+	public float timeOut = 0.05f;
+	float timeElapsed = 0;
+	float x;
+	float y;
+	Rigidbody rb;
+
 	void Start()
 	{
-		ws = new WebSocket("ws://localhost:3000/");
+		rb = GetComponent<Rigidbody> ();
+		//ws = new WebSocket("ws://192.168.1.28:12345");
+		ws = new WebSocket("ws://localhost:3000");
 
 		ws.OnOpen += (sender, e) =>
 		{
@@ -19,6 +27,12 @@ public class ClientExample: MonoBehaviour {
 		ws.OnMessage += (sender, e) =>
 		{
 			Debug.Log("WebSocket Message Data: " + e.Data);
+			if(e.Data == "1w") y += 1f;
+			if(e.Data == "1a") x += -1f;
+			if(e.Data == "1s") y += -1f;
+			if(e.Data == "1d") x += 1f;
+
+			
 		};
 
 		ws.OnError += (sender, e) =>
@@ -37,21 +51,22 @@ public class ClientExample: MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetKeyDown("w"))
-		{
-			ws.Send("w");
-		}
-		if (Input.GetKeyDown("a"))
-		{
-			ws.Send("a");
-		}
-		if (Input.GetKeyDown("s"))
-		{
-			ws.Send("s");
-		}
-		if (Input.GetKeyDown("d"))
-		{
-			ws.Send("d");
+		timeElapsed += Time.deltaTime;
+		if (timeElapsed >= timeOut) {
+			if (Input.GetKey ("w"))
+				ws.Send ("1w");
+			if (Input.GetKey ("a"))
+				ws.Send ("1a");
+			if (Input.GetKey ("s"))
+				ws.Send ("1s");
+			if (Input.GetKey ("d"))
+				ws.Send ("1d");
+			//transform.Translate (x, y, 0);
+			rb.AddForce (transform.right * x * 200);
+			rb.AddForce (transform.up * y * 200);
+
+			x = 0;
+			y = 0;
 		}
 	}
 

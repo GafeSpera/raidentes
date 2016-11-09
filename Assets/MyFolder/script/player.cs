@@ -64,7 +64,9 @@ public class player : MonoBehaviour {
 			}
 			timeElapsed = 0.0f;
 		}
-
+		if (Input.GetKey (KeyCode.Escape)) {
+			Application.LoadLevel ("Title");
+		}
 	}
 
 	void OnTriggerEnter(Collider col){
@@ -106,6 +108,8 @@ public class player : MonoBehaviour {
 				Rigidbody rigidbody = GetComponent<Rigidbody>();
 				rigidbody.useGravity = true;
 				rigidbody.constraints = RigidbodyConstraints.None;
+				Collider cap = GetComponent<Collider> ();
+				cap.isTrigger = true;
 			}
 			damageTime = 20;
 		}

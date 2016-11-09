@@ -5,6 +5,7 @@ public class PlayerRot : MonoBehaviour {
 
 	public float rotSpeed = 2f;
 	public GameObject par;
+	public GameObject target;
 	public bool p2;
 
 	void Update () {
@@ -30,5 +31,6 @@ public class PlayerRot : MonoBehaviour {
 			}
 		}
 		transform.rotation = Quaternion.Slerp(transform.rotation, par.transform.rotation, Time.deltaTime);
+		transform.LookAt (target.transform.position);
 	}
 }

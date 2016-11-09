@@ -10,6 +10,7 @@ public class ServerExample: MonoBehaviour {
 
 	void Start ()
 	{
+		//server = new WebSocketServer(12345);
 		server = new WebSocketServer(3000);
 
 		server.AddWebSocketService<Echo>("/");

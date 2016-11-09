@@ -12,10 +12,12 @@ public class Enemy : MonoBehaviour {
 	public int childC = 9;
 	public GameObject par;
 
-	public float shotStart;
 	public GameObject deathBoss;
 	public GameObject bossObj;
 	int expCount = 0;
+	public GameObject clearText;
+	public GameObject message;
+	int loadTitle = 300;
 
 	IEnumerator Start () {
 
@@ -49,7 +51,7 @@ public class Enemy : MonoBehaviour {
 				}
 			}
 		} else {
-			if (transform.childCount == 4) {
+			if (transform.childCount == 12) {
 				hp--;
 				if (damageTime <= 0) {
 					if (hp > 0) {
@@ -67,24 +69,14 @@ public class Enemy : MonoBehaviour {
 					Destroy (gameObject);
 				}
 			} else if (boss == true) {
+
+				clearText.SetActive (true);
+				message.SetActive (true);
+
 				unit.canShot = false;
 				Rigidbody rigidbody = bossObj.GetComponent<Rigidbody>();
 				rigidbody.useGravity = true;
 				rigidbody.constraints = RigidbodyConstraints.None;
-				if (expCount == 0) {
-					float x = Random.value * 100 - 50;
-					float y = Random.value * 100 - 50;
-					float z = Random.value * 100 - 50;
-
-					Vector3 pos = transform.position;
-					pos.x += x;
-					pos.y += y;
-					pos.z += z;
-
-					Instantiate (unit.explosion, pos, transform.rotation);
-					expCount = 5;
-				}
-				expCount--;
 			}
 		}
 	}
@@ -99,6 +91,24 @@ public class Enemy : MonoBehaviour {
 				par.transform.parent = null;
 			} else if (boss) {
 				bossObj.transform.Translate (1,0,0);
+				if (expCount == 0) {
+					float x = Random.value * 200 - 100;
+					float y = Random.value * 200 - 100;
+					float z = Random.value * 200 - 100;
+
+					Vector3 pos = transform.position;
+					pos.x += x;
+					pos.y += y;
+					pos.z += z;
+
+					Instantiate (unit.explosion, pos, transform.rotation);
+					expCount = 5;
+				}
+				expCount--;
+				loadTitle--;
+				if (loadTitle <= 0) {
+					Application.LoadLevel ("Title");
+				}
 			}
 		}
 	}
