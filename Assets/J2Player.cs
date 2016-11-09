@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class JPlayer : MonoBehaviour {
+public class J2Player : MonoBehaviour {
 
 	public float timeOut = 0.05f;
 	float timeElapsed = 0;
@@ -30,8 +30,8 @@ public class JPlayer : MonoBehaviour {
 
 	void Update(){
 
-		rb.AddForce (transform.right * cl.x1 * 200);
-		rb.AddForce (transform.up * cl.y1 * 200);
+		rb.AddForce (transform.right * cl.x2 * 200);
+		rb.AddForce (transform.up * cl.y2 * 200);
 	}
 
 }

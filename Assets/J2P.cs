@@ -3,16 +3,18 @@ using System.Collections;
 using WebSocketSharp;
 using WebSocketSharp.Net;
 
-public class ClientExample: MonoBehaviour {
+public class J2P: MonoBehaviour {
 
 	WebSocket ws;
 
 	public float timeOut = 0.05f;
 	float timeElapsed = 0;
 	public float x1,y1,x2,y2;
+	Rigidbody rb;
 
 	void Start()
 	{
+		rb = GetComponent<Rigidbody> ();
 		//ws = new WebSocket("ws://192.168.1.28:12345");
 		ws = new WebSocket("ws://localhost:3000");
 
@@ -28,13 +30,13 @@ public class ClientExample: MonoBehaviour {
 			if(e.Data == "1a") x1 = -1f;
 			if(e.Data == "1s") y1 = -1f;
 			if(e.Data == "1d") x1 = 1f;
-			if(e.Data == "1stop"){ x1 = 0; y1 = 0;}
+			//if(e.Data == "stop") x1 = 0;
+
 
 			if(e.Data == "2w") y2 = 1f;
 			if(e.Data == "2a") x2 = -1f;
 			if(e.Data == "2s") y2 = -1f;
 			if(e.Data == "2d") x2 = 1f;
-			if(e.Data == "2stop"){ x2 = 0; y2 = 0;}
 
 
 		};
@@ -66,11 +68,14 @@ public class ClientExample: MonoBehaviour {
 			if (Input.GetKey ("d"))
 				ws.Send ("1d");
 			if (Input.GetKeyUp ("w") || Input.GetKeyUp ("a") || Input.GetKeyUp ("s") || Input.GetKeyUp ("d")) {
-				ws.Send ("1stop");
+				//ws.Send ("stop");
 			}
+			//transform.Translate (x, y, 0);
+			//rb.AddForce (transform.right * x * 200);
+			//rb.AddForce (transform.up * y * 200);
 
-			//x1 = 0;
-			//y1 = 0;
+			x1 = 0;
+			y1 = 0;
 		}
 	}
 
