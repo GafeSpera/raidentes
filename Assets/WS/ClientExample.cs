@@ -13,8 +13,8 @@ public class ClientExample: MonoBehaviour {
 
 	void Start()
 	{
-		//ws = new WebSocket("ws://192.168.1.28:12345");
-		ws = new WebSocket("ws://localhost:3000");
+		ws = new WebSocket("ws://192.168.1.28:12345");
+		//ws = new WebSocket("ws://localhost:3000");
 
 		ws.OnOpen += (sender, e) =>
 		{
